@@ -37,9 +37,17 @@
 
         h1 {
             font-size: 24px;
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Уменьшен отступ для подписи */
             color: #8b4513;
             text-shadow: 2px 2px 4px rgba(255, 223, 186, 0.5);
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #5a3e36;
+            text-shadow: 1px 1px 2px rgba(255, 223, 186, 0.5);
+            margin-bottom: 15px; /* Отступ перед текстом предсказания */
+            font-style: italic;
         }
 
         #prediction {
@@ -102,6 +110,10 @@
                 font-size: 20px;
             }
 
+            .subtitle {
+                font-size: 12px; /* Уменьшаем размер подписи на мобильных устройствах */
+            }
+
             #prediction {
                 font-size: 18px;
                 max-width: 90%; /* Увеличиваем ширину текста на мобильных устройствах */
@@ -124,6 +136,7 @@
 <body>
     <div class="container">
         <h1>Масленичные предсказания</h1>
+        <div class="subtitle">От МАУ КДК «Красногорье» филиал «Центр культуры и досуга»</div>
         <p id="prediction" class="fade-in">Нажмите на кнопку, чтобы получить предсказание!</p>
         <button onclick="getPrediction()" id="predictionButton">Получить предсказание</button>
     </div>
